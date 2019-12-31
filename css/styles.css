@@ -1,0 +1,48 @@
+.line{
+width: 112px;
+height: 47px;
+border-bottom: solid black 1px;
+align-items: center;
+}
+
+body, div {
+  text-align: center;
+}
+
+#creatingTask {
+border-radius: 20px;
+padding-top: 4px;
+padding-left: 13px;
+padding-right: 13px;
+padding-bottom: 4px;
+border: solid black 1px;
+text-align: left;
+width: 600px;
+}
+
+#createTaskButton {
+  float: right
+}
+
+input, input:focus, textarea:focus, select:focus {
+  border: none;
+  outline: none;
+  max-width: inherit;
+}
+
+input[type=text] {
+  width: 500px;
+}
+
+
+}
+a:link {
+  color: #5C5555;
+}
+a:visited {
+  color: #366147;
+}
+a:hover {
+  color: #297575;
+}
+a:active
