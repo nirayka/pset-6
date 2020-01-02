@@ -9,7 +9,7 @@ window.onload = function() {
     //
     // onclick is an event that is fired when you click something (in our case, a button).
     // when we give onclick a value, we're telling JavaScript what to do when we click the button.
-    // you should set onclick equal to your function names (i.e., sayHello).
+    // you should set onclick equal to your function` names (i.e., sayHello).
     //
     // there are six event listeners being added for the staff solutions. you'll have an
     // equivalent set of six event listeners for your solutions. the first one is done for you.
@@ -19,7 +19,7 @@ window.onload = function() {
 }
 
 const addTask = function() {
-  let newTask = document.getElementById("newTask").value
+  var newTask = document.getElementById("newTask").value
   alert(newTask);
 }
 
