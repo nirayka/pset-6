@@ -13,19 +13,17 @@
       <h1>To-Do List</h1>
     </div>
     <div class="alltask" id="creatingTask">
-      <form>
-        <input type="text" id="newTask" autofocus>
-        <input id="createTaskButton" type="submit" onclick="addTask" value="create task">
-      </form>
+      <input type="text" id="newTask" autofocus>
+      <input id="createTaskButton" type="submit" value="create task">
     </div>
 
     <br><br>
-    <div class="line"></div>
-
     <div>
+      <ul id="tasklist">
+      </ul>
+    </div>
       <br>
       <button id="markPriority" onclick="markPriority"">Star</button>
     </div>
-
   </body>
 </html>
