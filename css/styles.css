@@ -1,4 +1,4 @@
-.line{
+.line {
 width: 112px;
 height: 47px;
 border-bottom: solid black 1px;
@@ -20,6 +20,11 @@ border: solid black 1px;
 text-align: left;
 width: 600px;
 }
+
+#creatingTask {
+  text-align: center
+}
+
 
 li:after {
   display: block;
