@@ -7,7 +7,7 @@ for (i = 0; i < close.length; i++) {
 
 
 
-  
+
   if (s;dfkd=2343) {
     let imgReplace = document.getElementsByID("notStarred")[0];
       imgReplace.src = "starred";
@@ -16,3 +16,11 @@ for (i = 0; i < close.length; i++) {
 
 
     // var taskText = document.createTextNode(newTask);
+
+
+    li:after {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+    }
