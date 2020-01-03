@@ -17,20 +17,24 @@ const addTask = function() {
     item.innerHTML = newTask;
     item.id = "taskText"
     document.getElementById("tasklist").appendChild(item);
+
     var uncheckedButton = document.createElement("BUTTON");
     uncheckedButton.innerHTML = "<img src='images/uncheckedcircle.png' width='13' height='13'>";
     uncheckedButton.id = "uncheckedButton"
     document.getElementById("taskText").appendChild(uncheckedButton)
 
     var trashButton = document.createElement("BUTTON");
-    trashButton.innerHTML = "<img src='images/trashcan.png' width='13' height='13'>";
+    trashButton.innerHTML = "<img src='images/trashcan.png' width='14' height='14'>";
     trashButton.id = "trashButton"
     document.getElementById("uncheckedButton").appendChild(trashButton)
 
     var endBreak = document.createElement("BR");
-    document.getElementById("trashButton").appendChild(endBreak)
+    document.getElementById("taskText").appendChild(endBreak)
   }
   document.getElementById("newTask").value = "";
+  // document.getElementById("taskText").value = "";
+  // document.getElementById("uncheckedButton").value = "";
+  // document.getElementById("trashButton").value = "";
 }
 
 const markPriority = function() {
@@ -49,5 +53,7 @@ const deleteTask = function() {
 }
 
 // matt says to create span and then prepend elements?????
-
+/// figure out why the trash can is crooked??
+/// get rid of bullet points
+/// fix the fact that bullets keep adding up on first task
 /// make priority, strikethrough, delete. edit the array when doing so
