@@ -1,7 +1,5 @@
 window.onload = function() {
   document.getElementById("createTaskButton").onclick = addTask;
-  document.getElementById("markPriorityButton").onclick = markPriority;
-  document.getElementById("deleteTaskButton").onclick = markPriority;
 }
 
 
@@ -13,23 +11,38 @@ const addTask = function() {
   var tasks = []
   tasks.push(newTask);
   if (newTask !== '') {
-    var item = document.createElement("li")
-    item.innerHTML = newTask;
-    item.id = "taskText"
-    document.getElementById("tasklist").appendChild(item);
+    var taskList = document.createElement("li")
+    document.getElementById("listContainer").appendChild(taskList)
 
-    var uncheckedButton = document.createElement("BUTTON");
-    uncheckedButton.innerHTML = "<img src='images/uncheckedcircle.png' width='13' height='13'>";
-    uncheckedButton.id = "uncheckedButton"
-    document.getElementById("taskText").appendChild(uncheckedButton)
+    var theCheckbox = document.createElement("input")
+    theCheckbox.type = "checkbox"
+    theCheckbox.id = "elcheckbox"
+    taskList.appendChild(theCheckbox)
+
+    taskValue = document.createTextNode(newTask);
+    console.log(taskValue)
+    taskList.appendChild(taskValue)
+
+    var priorityButton = document.createElement("BUTTON");
+    var emptyStar = document.createElement("j")
+    emptyStar.innerHTML = "<img src='images/emptystar.png' width='14' height='14'>";
+    priorityButton.id = "prioritything"
+    emptyStar.class = "emptystar"
+    priorityButton.appendChild(emptyStar);
+    taskList.appendChild(priorityButton)
 
     var trashButton = document.createElement("BUTTON");
-    trashButton.innerHTML = "<img src='images/trashcan.png' width='14' height='14'>";
+    var trashcan = document.createElement("i")
+    trashcan.innerHTML = "<img src='images/trashcan.png' width='14' height='14'>";
     trashButton.id = "trashButton"
-    document.getElementById("uncheckedButton").appendChild(trashButton)
+    trashcan.class = "trashicon"
+
+    trashButton.appendChild(trashcan);
+    taskList.appendChild(trashButton)
 
     var endBreak = document.createElement("BR");
-    document.getElementById("taskText").appendChild(endBreak)
+    taskList.appendChild(endBreak)
+
   }
   document.getElementById("newTask").value = "";
   // document.getElementById("taskText").value = "";
@@ -37,23 +50,36 @@ const addTask = function() {
   // document.getElementById("trashButton").value = "";
 }
 
-const markPriority = function() {
+document.getElementById("trashButton").onclick = deleteTask;
+
+const deleteTask = function() {
+  for (i = 0; i < taskList.length; i++) {
+    taskListItem = taskListChild
+  }
 
 }
 
-const deleteTask = function() {
-  var close = document.getElementsByClassName("closeButton");
-  var i;
-  for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-    }
+
+
+document.getElementById("markPriorityButton").onclick = markPriority; {
+
+
+
+}
+
+
+const enterKey = function() {
+  if (event.keyCode === 13 || event.which === 13) {
+    addTask();
   }
 }
 
-// matt says to create span and then prepend elements?????
-/// figure out why the trash can is crooked??
-/// get rid of bullet points
-/// fix the fact that bullets keep adding up on first task
-/// make priority, strikethrough, delete. edit the array when doing so
+
+  // var close = document.getElementsByClassName("closeButton");
+  // var i;
+  // for (i = 0; i < close.length; i++) {
+  // close[i].onclick = function() {
+  //   var div = this.parentElement;
+  //  div.style.display = "none";
+  //   }
+  // }
