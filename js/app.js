@@ -1,14 +1,44 @@
 window.onload = function() {
   document.getElementById("createTaskButton").onclick = addTask;
-}
-const addTask = function() {
   var newTask = document.getElementById("newTask").value;
+}
+
+const unchecked = document.createElement("IMG")
+unchecked.innerHTML = "<img src='images/uncheckedcircle.png' width='14' height='14'>";
+
+const emptyStar = document.createElement("IMG")
+emptyStar.innerHTML = "<img src='images/emptystar.png' width='14' height='14'>";
+
+
+function addTask(task, index, priority, finish, dismiss) {
+
+  index = indexValue,
+  task =  input.value,
+  priority = false,
+  finish = false,
+  dismiss = false,
+
+  console.log("bae")
+
   if (newTask === '') {
     alert("Task cannot be blank.");
+  } else {
+    taskList.push({
+      index: theIndex,
+      task:  input.value,
+      priority: false,
+      finish: false,
+      dismiss: false,
+    });
+
+    showTask();
+    document.getElementById("newTask").value = "";
+    theIndex++;
+
   }
-  var tasks = []
-  tasks.push(newTask);
-  if (newTask !== '') {
+}
+
+function showTasks() {
     var taskList = document.createElement("li")
     taskList.className = "close"
     document.getElementById("listContainer").appendChild(taskList)
@@ -43,29 +73,21 @@ const addTask = function() {
 
     var endBreak = document.createElement("BR");
     taskList.appendChild(endBreak)
-
-    document.getElementById("newTask").value = "";
-    // var span = document.createElement("SPAN");
-    // span.className = "close";
-    // taskList.appendChild(span)
-    }
-  }
+}
 
 
 const deleteTask = function() {
   let taskList;
   console.log("hi")
+  console.log(emptyStar)
   var close = document.getElementsByClassName("close");
   var i;
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      tasks.splice(i);
-  }
-  console.log(tasks)
-  addTask();
+    tasks.splice(i);
+    }
   }
 }
-
 
 // maybe do something like the close thing except put class on each object in the list and then remove it??
 // push each into the same array and be li
