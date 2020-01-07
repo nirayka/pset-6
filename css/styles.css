@@ -23,14 +23,15 @@ h1 {
 input[type="text"] {
     background: transparent;
     border: none;
-    width: 500px;
+    width: 490px;
 }
 
 input[type="submit"] {
     background-color: #366147;
     border: none;
-    border-radius: 12px;
-    padding-right: 2px;
+    border-radius: 3px;
+    padding-right: 3px;
+    color: #E8DEC5
 }
 
 
@@ -69,7 +70,7 @@ width: 600px;
 
 li {
   border-radius: 20px;
-  padding-top: 4px;
+  padding-top: 30px;
   padding-left: 13px;
   padding-right: 13px;
   padding-bottom: 4px;
