@@ -2,14 +2,11 @@ window.onload = function() {
   document.getElementById("createTaskButton").onclick = addTask;
 }
 
-let theCheckboxes = [];
-let theTasks = [];
-let priorityButtons = [];
-let theStars = [];
-let deleteButtons = [];
-let theTrash = [];
-let taskNumber = 0
-
+let theLists = document.getElementsByClassName("listThing");
+let theCheckboxes = document.getElementsByClassName("finished");
+let theTasks = document.getElementsByClassName("task")
+let thePriorities = document.getElementsByClassName("priority");
+let theDeletes = document.getElementsByClassName("deleted");
 let elementSet = [];
 
 // html row is listSection.
@@ -32,7 +29,7 @@ addTask = function() {
 
     var theParentElement = document.getElementsByClassName("listThing")
 
-    let x = elementSet.indexOf(taskObject);
+    var x = elementSet.indexOf(taskObject);
 
     elementSet[x].listSection = document.createElement("li");
     elementSet[x].listSection.class = "listThing";
@@ -41,6 +38,7 @@ addTask = function() {
     elementSet[x].checkBoxButton = document.createElement("INPUT")
     elementSet[x].checkBoxButton.type = "checkbox"
     elementSet[x].checkBoxButton.class = "finished"
+    elementSet[x].checkBoxButton.onclick = markPriority
     elementSet[x].listSection.append(elementSet[x].checkBoxButton);
 
     elementSet[x].taskText = document.createTextNode(newTask)
@@ -50,6 +48,7 @@ addTask = function() {
     elementSet[x].priorityButton = document.createElement("BUTTON");
     elementSet[x].priorityButton.class = "priority"
     elementSet[x].priorityButton.innerHTML = "!";
+    elementSet[x].priorityButton.onclick = markPriority
     elementSet[x].listSection.append(elementSet[x].priorityButton);
 
     elementSet[x].deleteButton = document.createElement("BUTTON");
@@ -58,8 +57,43 @@ addTask = function() {
     elementSet[x].listSection.append(elementSet[x].deleteButton);
   }
   document.getElementById("newTask").value = "";
-  taskNumber++
 }
+
+
+markPriority = function() {
+  console.log("hi")
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 stupid = function() {

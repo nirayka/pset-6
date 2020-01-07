@@ -47,11 +47,11 @@ div {
 button {
   border: 0px;
   float: right;
-  text-decoration: none;
   background-color: transparent;
-  color: transparent;
+  color: #366147;
+  font-weight: bold;
   padding-top: 2px;
-  padding-left: 2px;
+  padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 2px;
   outline: none;
@@ -98,16 +98,3 @@ input {
   font-family: 'Playfair Display', serif;
   font-size: 17px;
 }
-
-
-}
-a:link {
-  color: #5C5555;
-}
-a:visited {
-  color: #366147;
-}
-a:hover {
-  color: #297575;
-}
-a:active
