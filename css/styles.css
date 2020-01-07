@@ -70,7 +70,7 @@ width: 600px;
 
 li {
   border-radius: 20px;
-  padding-top: 30px;
+  padding-top: 4px;
   padding-left: 13px;
   padding-right: 13px;
   padding-bottom: 4px;
@@ -88,6 +88,10 @@ input, input:focus, textarea:focus, select:focus {
   border: none;
   outline: none;
   max-width: inherit;
+}
+
+.finished {
+  padding-top: 100px
 }
 
 input {
