@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:600&display=swap');
 
 .line {
 width: 112px;
@@ -15,10 +15,21 @@ body {
 }
 
 h1 {
+  color: black;
   font-family: 'Bungee Hairline', cursive;
-  text-align: center;
-  display: inline-block;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 24px;
 }
+h2 {
+  color: #416650;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 input[type="text"] {
     background: transparent;
@@ -31,7 +42,7 @@ input[type="submit"] {
     border: none;
     border-radius: 3px;
     padding-right: 3px;
-    color: #E8DEC5
+    color: #E8DEC5;
 }
 
 

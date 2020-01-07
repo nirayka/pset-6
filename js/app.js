@@ -61,13 +61,20 @@ addTask = function() {
 }
 
 markComplete = function() {
-  console.log("complete")
-  for (let i = 0; i < theDeletes.length; i++) {
-    var momentaryCheckbox = elementSet[i].checkBoxButton
-    if (momentaryCheckbox.checked == true) {
-      console.log("hi")
-    }
-  }
+  element = event.target
+  elementList = element.parentNode;
+  alert(element)
+
+}
+
+
+//  console.log("complete")
+//  for (let i = 0; i < theDeletes.length; i++) {
+//    var momentaryCheckbox = elementSet[i].checkBoxButton
+//    if (momentaryCheckbox.checked == true) {
+//      console.log("hi")
+//    }
+//  }
 
 //    completedButtons[i].onclick = function() {
 //      if (items[i].completed === false) {
@@ -83,7 +90,7 @@ markComplete = function() {
 //        items[i].completed = false;
 //      }
 //    };
-}
+// }
 
 
 markPriority = function() {
