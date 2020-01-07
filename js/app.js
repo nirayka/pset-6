@@ -38,7 +38,7 @@ addTask = function() {
     elementSet[x].checkBoxButton = document.createElement("INPUT")
     elementSet[x].checkBoxButton.type = "checkbox"
     elementSet[x].checkBoxButton.class = "finished"
-    elementSet[x].checkBoxButton.onclick = markPriority
+    elementSet[x].checkBoxButton.onclick = markComplete
     elementSet[x].listSection.append(elementSet[x].checkBoxButton);
 
     elementSet[x].taskText = document.createTextNode(newTask)
@@ -54,20 +54,49 @@ addTask = function() {
     elementSet[x].deleteButton = document.createElement("BUTTON");
     elementSet[x].deleteButton.setAttribute.class = "deleted"
     elementSet[x].deleteButton.innerHTML = "X";
+    elementSet[x].deleteButton.onclick = deleteTask;
     elementSet[x].listSection.append(elementSet[x].deleteButton);
   }
   document.getElementById("newTask").value = "";
 }
 
+markComplete = function() {
+  console.log("complete")
+  for (let i = 0; i < theDeletes.length; i++) {
+    var momentaryCheckbox = elementSet[i].checkBoxButton
+    if (momentaryCheckbox.checked == true) {
+      console.log("hi")
+    }
+  }
 
-markPriority = function() {
-  console.log("hi")
-
-
+//    completedButtons[i].onclick = function() {
+//      if (items[i].completed === false) {
+//        theTasks[i].style.setProperty("text-decoration", "line-through");
+//        theTasks[i].style.backgroundColor = "#D0F0C0";
+//        elementSet[i].completed = true;
+//        if (items[i].prioritized) {
+//          prioritizeItem();
+//        }
+//      } else if (items[i].completed) {
+//        completedButtons[i].style.setProperty("text-decoration", "none");
+//        completedButtons[i].style.backgroundColor = "transparent";
+//        items[i].completed = false;
+//      }
+//    };
 }
 
 
+markPriority = function() {
+  console.log("hi")
+  for (let i = 0; i < theDeletes.length; i++) {
+    elementSet.unshift(elementSet[i])
+  }
+}
 
+
+deleteTask = function() {
+  console.log("delete")
+}
 
 
 
@@ -126,9 +155,4 @@ const showTask = function() {
   console.log("bae")
   var listContainer = document.getElementById("listContainer")
   listContainer.appendChild(newTask, priorityButton, trashButton)
-}
-
-
-const deleteTask = function() {
-  console.log("delete")
 }
