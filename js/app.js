@@ -2,14 +2,13 @@ window.onload = function() {
   document.getElementById("createTaskButton").onclick = addTask;
 }
 
-let theLists = document.getElementsByClassName("listThing");
-let theCheckboxes = document.getElementsByClassName("finished");
-let theTasks = document.getElementsByClassName("task")
-let thePriorities = document.getElementsByClassName("priority");
-let theDeletes = document.getElementsByClassName("deleted");
+var theLists = document.getElementsByClassName("listThing");
+var theCheckboxes = document.getElementsByClassName("finished");
+var theTasks = document.getElementsByClassName("task")
+var thePriorities = document.getElementsByClassName("priority");
+var theDeletes = document.getElementsByClassName("deleted");
 let elementSet = [];
-
-// html row is listSection.
+var pageElements = document.getElementsByClassName("mainParent")
 
 addTask = function() {
   var newTask = document.getElementById("newTask").value;
@@ -32,7 +31,7 @@ addTask = function() {
     var x = elementSet.indexOf(taskObject);
 
     elementSet[x].listSection = document.createElement("li");
-    elementSet[x].listSection.class = "listThing";
+    elementSet[x].listSection.class = "mainParent";
     document.getElementById("listContainer").append(elementSet[x].listSection);
 
     elementSet[x].checkBoxButton = document.createElement("INPUT")
@@ -48,13 +47,13 @@ addTask = function() {
     elementSet[x].priorityButton = document.createElement("BUTTON");
     elementSet[x].priorityButton.class = "priority"
     elementSet[x].priorityButton.innerHTML = "!";
-    elementSet[x].priorityButton.onclick = markPriority
+    markPriority = elementSet[x].priorityButton.onclick
     elementSet[x].listSection.append(elementSet[x].priorityButton);
 
     elementSet[x].deleteButton = document.createElement("BUTTON");
     elementSet[x].deleteButton.setAttribute.class = "deleted"
     elementSet[x].deleteButton.innerHTML = "X";
-    elementSet[x].deleteButton.onclick = deleteTask;
+    elementSet[x].deleteButton.addEventListener("click", deleteTask)
     elementSet[x].listSection.append(elementSet[x].deleteButton);
   }
   document.getElementById("newTask").value = "";
@@ -63,8 +62,6 @@ addTask = function() {
 markComplete = function() {
   element = event.target
   elementList = element.parentNode;
-  alert(element)
-
 }
 
 
@@ -93,16 +90,28 @@ markComplete = function() {
 // }
 
 
-markPriority = function() {
-  console.log("hi")
-  for (let i = 0; i < theDeletes.length; i++) {
-    elementSet.unshift(elementSet[i])
+deleteTask = function() {
+  document.getElementsByClassName("deleted").onclick = function() {
+    for (let i = 0; i < elementSet.length; i++) {
+      console.log("hello2")
+      pageElements.removeChild(elementSet[i]);
+      const gottaLeave = pageElements[i];
+      elementSet[i].removeChild(gottaLeave);
+      elementSet.splice(i, 1);
+    };
   }
 }
 
 
-deleteTask = function() {
-  console.log("delete")
+
+  for (let i = 0; i < theDeletes.length; i++) {
+    elementList.splice(i, 1)
+    console.log("baecita")
+  }
+
+
+markPriority = function() {
+  console.log("helloooo")
 }
 
 
