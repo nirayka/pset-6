@@ -92,6 +92,7 @@ markComplete = function() {
 
 deleteTask = function() {
   document.getElementsByClassName("deleted").onclick = function() {
+    console.log("bruh")
     for (let i = 0; i < elementSet.length; i++) {
       console.log("hello2")
       pageElements.removeChild(elementSet[i]);
@@ -104,71 +105,12 @@ deleteTask = function() {
 
 
 
-  for (let i = 0; i < theDeletes.length; i++) {
-    elementList.splice(i, 1)
-    console.log("baecita")
-  }
+//  for (let i = 0; i < theDeletes.length; i++) {
+//    elementList.splice(i, 1)
+//    console.log("hello123")
+//  }
 
 
 markPriority = function() {
   console.log("helloooo")
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-stupid = function() {
-    var unchecked = document.createElement("IMG")
-    unchecked.innerHTML = "<img src='images/uncheckedcircle.png' width='14' height='14'>";
-    theCheckboxes.push(unchecked)
-
-    theTasks.push(newTask)
-
-    var priorityButton = document.createElement("BUTTON");
-    priorityButtons.push(priorityButton)
-    var emptyStar = document.createElement("IMG")
-    emptyStar.innerHTML = "<img src='images/emptystar.png' width='14' height='14'>";
-    theStars.push(emptyStar)
-    priorityButton.appendChild(emptyStar)
-
-    var trashButton = document.createElement("BUTTON");
-    trashButton.onclick = deleteTask;
-    deleteButtons.push(trashButton)
-    var trashcan = document.createElement("IMG")
-    trashcan.innerHTML = "<img src='images/trashcan.png' width='14' height='14'>";
-    theTrash.push(trashcan)
-    trashButton.appendChild(trashcan)
-
-    console.log("what")
-  }
-
-
-const showTask = function() {
-  console.log("bae")
-  var listContainer = document.getElementById("listContainer")
-  listContainer.appendChild(newTask, priorityButton, trashButton)
 }
