@@ -1,35 +1,3 @@
-# Problem Set 6
-
-It's time to put your skills to the test. This problem set focuses on programming in JavaScript. More specifically, it focuses on creating a fully functional to-do list application from scratch.
-
-## Getting Started
-
-To get started, create a [GitHub](https://github.com/) repository to store your code. When you're finished, clone my skeleton to get all of the starter code and instructions. Setup a remote to push your code to your repository instead of mine.
-
-### Setup
-
-1. Login to your GitHub account and create a new repository named `pset-6`.
-2. In the terminal, navigate to your `APCSP` directory on the `Desktop`.
-```
-$ cd ~/Desktop/APCSP
-```
-3. Clone my skeleton repository into a directory named `pset-6`.
-```
-$ git clone git@github.com:ap-principles-ucvts/pset-6-skeleton.git pset-6
-````
-4. Change into your newly created `pset-6` directory.
-```
-$ cd pset-6
-```
-5. Overwrite the remote, which originally points at my skeleton repository.
-```
-$ git remote rename origin upstream
-```
-6. Add a new remote that points at your `pset-6` repository. Replace `YOUR-USERNAME` with your actual username.
-```
-$ git remote add origin git@github.com:YOUR-USERNAME/pset-6.git
-```
-
 ## Overview
 
 There aren't any individual exercises this time. Instead, you'll be building an application (that means HTML, CSS, and JavaScript). Below, you'll read through the requirements of the application.
